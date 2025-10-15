@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>交互式克拉尼图形</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+  <script src="sketch.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #222;
+      color: white;
+      margin: 0;
+      padding: 20px;
+    }
+    .controls {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: 80px 200px 50px;
+      gap: 10px;
+      align-items: center;
+    }
+    label {
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+  <h1>交互式克拉尼图形 (Chladni Figures)</h1>
+  <div class="controls">
+    <label for="nx">n_x:</label>
+    <input type="range" id="nx" min="0" max="15" value="2" step="0.05">
+    <span id="nx-val">2</span>
+
+    <label for="ny">n_y:</label>
+    <input type="range" id="ny" min="0" max="15" value="1" step="0.05">
+    <span id="ny-val">1</span>
+
+    <label for="atol">Tolerance:</label>
+    <input type="range" id="atol" min="0" max="5" value="1" step="0.01">
+    <span id="atol-val">1</span>
+  </div>
+</body>
+</html>
